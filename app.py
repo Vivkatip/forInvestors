@@ -6,7 +6,7 @@ import random
 import pandas as pd
 import altair as alt
 
-st.set_page_config(page_title="SleepFlow", page_icon="☁️", layout="wide", initial_sidebar_state="expanded")
+st.set_page_config(page_title="SleepyCloud", page_icon="☁️", layout="wide", initial_sidebar_state="expanded")
 
 DB_PATH = "sleepflow_app.db"
 
@@ -620,7 +620,7 @@ def sidebar_nav():
         ul = get_ul(); s = calc_streak()
         st.markdown(f'<div class="sh"><div style="display:flex;align-items:center;gap:8px">'
                     f'<div style="width:36px">{cloud_svg("happy","36px")}</div>'
-                    f'<div><div style="font-size:1.25rem;font-weight:900">☁️ SleepFlow</div>'
+                    f'<div><div style="font-size:1.25rem;font-weight:900">☁️ SleepyCloud</div>'
                     f'<div style="font-size:.78rem;color:{T["muted"]}">Помощник для сна</div></div></div></div>',
                     unsafe_allow_html=True)
         xp_bar(ul)
@@ -645,7 +645,7 @@ def sidebar_nav():
 def top_header():
     st.markdown(f'<div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">'
                 f'<span style="font-size:1.5rem">☁️</span>'
-                f'<span style="font-size:1.25rem;font-weight:900">SleepFlow</span>'
+                f'<span style="font-size:1.25rem;font-weight:900">SleepyCloud</span>'
                 f'<span style="font-size:.88rem;color:{T["muted"]};margin-left:8px">Спокойный сон</span></div>',
                 unsafe_allow_html=True)
 
