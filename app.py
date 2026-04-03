@@ -8,7 +8,7 @@ import altair as alt
 
 st.set_page_config(page_title="SleepyCloud", page_icon="☁️", layout="wide", initial_sidebar_state="expanded")
 
-DB_PATH = "sleepflow_app.db"
+DB_PATH = "SleepyCloud_app.db"
 
 def get_conn():
     conn = sqlite3.connect(DB_PATH, check_same_thread=False)
