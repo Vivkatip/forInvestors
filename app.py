@@ -777,11 +777,12 @@ def page_sounds():
         for name in sn:
             desc,url,emoji = SOUNDS[name]; sel = st.session_state.selected_sound == name
             bc = T["accent"] if sel else T["border"]; bg = "rgba(120,201,255,.06)" if sel else "transparent"
+            sel_badge = '<span class="bg1">▶️</span>' if sel else ""
             st.markdown(f'<div style="padding:12px;border-radius:14px;border:1.5px solid {bc};background:{bg};margin-bottom:6px">'
                         f'<div style="display:flex;align-items:center;gap:10px"><span style="font-size:1.6rem">{emoji}</span>'
                         f'<div style="flex:1"><div style="font-weight:800;font-size:.92rem">{name}</div>'
                         f'<div style="font-size:.78rem;color:{T["muted"]}">{desc}</div></div>'
-                        f'{"<span class=\"bg1\">▶️</span>" if sel else ""}</div></div>',unsafe_allow_html=True)
+                        f'{sel_badge}</div></div>',unsafe_allow_html=True)
         selected = st.selectbox("Звук",sn,index=sn.index(st.session_state.selected_sound),label_visibility="collapsed")
         timer = st.selectbox("⏱️ Таймер",["15 мин","30 мин","45 мин","60 мин"],index=1)
         if st.button("▶️ Включить",key="ps"):
